@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
 
         // Determine if the player is moving based on input
-        _isPlayerMoving = Mathf.Abs(horizontalInput) > 0.1f;
+        _isPlayerMoving = Mathf.Abs(horizontalInput) > 0.1f; 
 
         if (_isPlayerMoving)
         {
