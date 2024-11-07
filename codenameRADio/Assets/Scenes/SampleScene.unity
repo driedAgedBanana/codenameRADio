@@ -560,6 +560,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!212 &667760018 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8204508360494124117, guid: cd289c376ba7b5f43977e8636174b737, type: 3}
+  m_PrefabInstance: {fileID: 7755505030950536065}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1968599024
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,9 +808,29 @@ PrefabInstance:
       propertyPath: m_Points.Array.data[28].y
       value: -0.249541
       objectReference: {fileID: 0}
+    - target: {fileID: 3312554687181653364, guid: cd289c376ba7b5f43977e8636174b737, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 667760014}
+    - target: {fileID: 3312554687181653364, guid: cd289c376ba7b5f43977e8636174b737, type: 3}
+      propertyPath: boxSize.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3312554687181653364, guid: cd289c376ba7b5f43977e8636174b737, type: 3}
+      propertyPath: castDistance
+      value: 0.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 3312554687181653364, guid: cd289c376ba7b5f43977e8636174b737, type: 3}
+      propertyPath: playerSprite
+      value: 
+      objectReference: {fileID: 667760018}
     - target: {fileID: 5805938906500199793, guid: cd289c376ba7b5f43977e8636174b737, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7488417810504517598, guid: cd289c376ba7b5f43977e8636174b737, type: 3}
+      propertyPath: m_GravityScale
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9144423295418745631, guid: cd289c376ba7b5f43977e8636174b737, type: 3}
       propertyPath: m_LocalPosition.x
