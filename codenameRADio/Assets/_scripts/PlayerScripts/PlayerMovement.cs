@@ -61,10 +61,26 @@ public class PlayerMovement : MonoBehaviour
         // Check if the player is grounded
         _isGrounded = IsGrounded();
 
+        if (_isPlayerMoving && !_isGrounded)
+        {
+            animator.SetBool("IsGrounded", false);
+        }
+        if (_isPlayerMoving && _isGrounded)
+        { 
+            animator.SetBool("IsGrounded", true);
+        }
+        //if (!_isPlayerMoving && _isGrounded)
+        //{
+        //    animator.SetBool("IsWalking", false);
+        //    animator.SetBool("IsGrounded", true);
+        //}
+
         // Jump if the player is on the ground and the jump key is pressed
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
+            _isGrounded = false;
+            animator.SetBool("IsGrounded", false);
         }
     }
 
@@ -72,6 +88,7 @@ public class PlayerMovement : MonoBehaviour
     public bool IsGrounded()
     {
         // Perform BoxCast to detect if the player is on the ground
+        animator.SetBool("IsGrounded", true);
         return Physics2D.BoxCast(transform.position, boxSize, 0, Vector2.down, castDistance, groundLayer);
 
     }
